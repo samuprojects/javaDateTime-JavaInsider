@@ -33,5 +33,14 @@ public class InRangeApp {
         return odt.isEqual(start) || odt.isEqual(end) || odt.isAfter(start) && odt.isBefore(end);
 
         // NÃO USAR O compareTo pois não abrange INSTANTES NO TEMPO
+
+        /*
+        * Comanetário de apoio do fórum se fosse utilizado OffsetDateTime now, no método
+        *  e no return colocar now.isEqual(start)
+        *
+        * Se fosse declarado o now diretamente no método isRange, haveria um acoplamento do OffsetDateTime atual,
+        * mas como o odt está sendo passado como parâmetro do método inRange,
+        * é possível informar qualquer valor para o OffsetDateTime ao invés de usar sempre apenas o now como valor fixo
+        * dentro do método (data e hora de agora)! */
     }
 }
